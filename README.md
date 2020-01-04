@@ -1,11 +1,18 @@
-# lnmp
-准备
-### 
+## 说明
+这是一个基于alpine的thinkphp5创建的一个lnmp工具
+
+### 准备
 下载docker和docker-compose工具
 参考官网
 https://hub.docker.com
 
-
+### 操作
+```
+git clone https://github.com/shykhy/lnmp.git # 克隆代码到本地
+cd lnmp 
+docker-compose up -d # 运行compose
+```
+### 附录
 #### docker-compose 文件
 ```
 version: "3"
@@ -111,11 +118,11 @@ RUN echo https://mirrors.aliyun.com/alpine/v3.11/main/ > /etc/apk/repositories \
     && docker-php-ext-install pdo_mysql mysqli pcntl gd
 ```
 #### 下载thinkphp5到web
-下载地址
+> 下载地址
 ```
 http://www.thinkphp.cn/donate/download/id/1278.html
 ```
-解压到web文件夹
+> 解压到web文件夹
 ```
 uzip xxxx.tar.gz  -d .
 ```
