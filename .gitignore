@@ -2,3 +2,5 @@ mysqldata/*
 !mysqldata/README.md
 redisdata/*
 !redisdata/README.md
+web/*
+!web/README.md
