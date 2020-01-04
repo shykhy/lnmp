@@ -4,3 +4,5 @@ redisdata/*
 !redisdata/README.md
 web/*
 !web/README.md
+logs/nginx/*
+!logs/nginx/README.md
