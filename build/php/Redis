@@ -1,0 +1,6 @@
+FROM php:7.4-fpm-alpine
+RUN cd phpredis-5.0.0 \
+    && /usr/local/bin/phpize \
+    && ./configure --with-php-config=/usr/local/bin/php-config \
+    && make \
+    && make install

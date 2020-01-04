@@ -2,12 +2,15 @@ version: "3"
 services:
         fpm:
          build:
-           context: ./php
-           dockerfile: Dockerfile
+           context: ./build/php
+           dockerfile: Redis
          image: php:7.4-fpm-alpine
          container_name: fpm
          volumes:
             - ./web:/php
+            - ./conf/php/php-fpm.d:/usr/local/etc/php-fpm.d
+            - ./conf/php/php-fpm.conf:/usr/local/etc/php-fpm.conf
+            - ./conf/php/php.ini:/usr/local/etc/php/php.ini
          networks:
             lnmpnet:
               ipv4_address: 192.168.20.3
@@ -36,7 +39,18 @@ services:
          environment:
             MYSQL_ROOT_PASSWORD: 123456
          networks:
-           - lnmpnet
+            lnmpnet:
+                ipv4_address: 192.168.20.5
+        redis:
+         image: redis:5.0-alpine
+         container_name: redis
+         ports: 
+            - 6379:6379
+         volumes:
+            - ./redisdata:/data
+            - ./conf/redis/redis.conf:/usr/local/etc/redis/redis.conf
+         networks:
+            - lnmpnet
 networks:
         lnmpnet:
           driver: bridge

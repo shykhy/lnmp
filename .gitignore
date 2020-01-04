@@ -1,3 +1,4 @@
-mysqldata
-redisdata
-web/*
+mysqldata/*
+!mysqldata/README.md
+redisdata/*
+!redisdata/README.md

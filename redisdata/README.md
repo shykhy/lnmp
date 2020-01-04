@@ -1,0 +1,1 @@
+this redis data directory
