@@ -1,6 +1,40 @@
 ## 说明
 这是一个基于alpine的thinkphp5创建的一个lnmp工具
 
+### 目录
+├── build
+│   └── php
+│       └── Dockerfile
+├── conf
+│   ├── mysql
+│   │   ├── conf.d
+│   │   │   └── mysql.cnf
+│   │   ├── my.cnf
+│   │   ├── mysql.cnf
+│   │   └── mysql.conf.d
+│   │       └── mysqld.cnf
+│   ├── nginx
+│   │   ├── conf.d
+│   │   │   └── default.conf
+│   │   └── nginx.conf
+│   ├── php
+│   │   ├── php-fpm.conf
+│   │   ├── php-fpm.d
+│   │   │   ├── docker.conf
+│   │   │   ├── www.conf
+│   │   │   ├── www.conf.default
+│   │   │   └── zz-docker.conf
+│   │   └── php.ini
+│   └── redis
+│       └── redis.conf
+├── docker-compose.yml
+├── logs
+│   └── nginx
+│       ├── access.log
+│       └── error.log
+├── README.md
+└── redisdata
+    └── README.md
 ### 准备
 下载docker和docker-compose工具
 参考官网
