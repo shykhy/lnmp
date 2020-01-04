@@ -2,6 +2,7 @@
 这是一个基于alpine的thinkphp5创建的一个lnmp工具
 
 ### 目录
+```
 ├── build
 │   └── php
 │       └── Dockerfile
@@ -35,6 +36,7 @@
 ├── README.md
 └── redisdata
     └── README.md
+``` 
 ### 准备
 下载docker和docker-compose工具
 参考官网
