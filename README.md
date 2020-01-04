@@ -153,6 +153,11 @@ RUN echo https://mirrors.aliyun.com/alpine/v3.11/main/ > /etc/apk/repositories \
 # pdo_mysql安装
     && docker-php-ext-install pdo_mysql mysqli pcntl gd
 ```
+#### 开启到php的redis模块
+```
+vi ./conf/php/php.ini
+extension=redis.so
+```
 #### 下载thinkphp5到web
 > 下载地址
 ```
